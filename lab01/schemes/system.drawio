@@ -1,0 +1,46 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" id="bbf3c6e2266b491590c5239f99a03061" version="29.3.6">
+  <diagram id="bbf3c6e2266b491590c5239f99a030611" name="System diagram">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4755e31928b94cf483a6327c180ce1c9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Польотний контролер (FC)" vertex="1">
+          <mxGeometry height="70" width="260" x="310" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="6006c33b65a24b75a6d8b0f07c2dcd47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Підвіс: контролер (BaseCam / SimpleBGC)" vertex="1">
+          <mxGeometry height="70" width="360" x="260" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="41925ddc7aca496aaaac5be3ebd85bc2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="BLDC мотор Pitch" vertex="1">
+          <mxGeometry height="60" width="260" x="850" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="90ba4e0d82df4181b556e9dedae47423" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="BLDC мотор Roll" vertex="1">
+          <mxGeometry height="60" width="260" x="620" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="d19ccc933f4c4d03981c729f8003f03b" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Мультиспектральна камера (MicaSense RedEdge-P)" vertex="1">
+          <mxGeometry height="70" width="360" x="260" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="cae3c61ad8d24080b593570205c61f67" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Живлення / BEC (DC-DC)" vertex="1">
+          <mxGeometry height="70" width="260" x="30" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="6313e0f46282412db6eb1d195b3324aa" edge="1" parent="1" source="4755e31928b94cf483a6327c180ce1c9" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="6006c33b65a24b75a6d8b0f07c2dcd47" value="S.Bus або UART">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8cf23d9637a49249864c26274f51b71" edge="1" parent="1" source="6006c33b65a24b75a6d8b0f07c2dcd47" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="41925ddc7aca496aaaac5be3ebd85bc2" value="Керування моторами (Motor drive)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="641560d790934049a785304c0f476df8" edge="1" parent="1" source="6006c33b65a24b75a6d8b0f07c2dcd47" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="90ba4e0d82df4181b556e9dedae47423" value="Керування моторами (Motor drive)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="808fce3fa65c41a998ad89fd0c8cd5cf" edge="1" parent="1" source="cae3c61ad8d24080b593570205c61f67" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="6006c33b65a24b75a6d8b0f07c2dcd47" value="Живлення Vout (5В/12В)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5e6831704dca4c14bbf8de79caae19f9" edge="1" parent="1" source="cae3c61ad8d24080b593570205c61f67" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="d19ccc933f4c4d03981c729f8003f03b" value="Живлення Vout (камера)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a0e871ba98794bf6a9f8346f7333759b" edge="1" parent="1" source="4755e31928b94cf483a6327c180ce1c9" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="d19ccc933f4c4d03981c729f8003f03b" value="Trigger / Sync">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

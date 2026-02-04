@@ -1,0 +1,52 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" id="98522ae5d9fa4df493066706736a8242" version="29.3.6">
+  <diagram id="98522ae5d9fa4df493066706736a82421" name="Wiring diagram">
+    <mxGraphModel dx="2847" dy="989" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e74a88177f1748e291a58ca5e8fa807c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="FC (вихід S.Bus/UART)" vertex="1">
+          <mxGeometry height="90" width="260" x="-480" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ebf53ccb3c594a48b6eddb8ab9b823bc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Контролер підвісу (вхід S.Bus/UART, Motor1, Motor2, Power)" vertex="1">
+          <mxGeometry height="110" width="420" x="-20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="08594352cd6d48af9d3338d308b39ce6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Мотор Pitch (3-фазний BLDC)" vertex="1">
+          <mxGeometry height="70" width="300" x="610" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="33fd261c20c040bfa37af7d6d5b98abc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Мотор Roll (3-фазний BLDC)" vertex="1">
+          <mxGeometry height="70" width="300" x="610" y="379" as="geometry" />
+        </mxCell>
+        <mxCell id="db9f6d566fcf4b5ab65744961709c164" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="BEC / DC-DC (Vin → Vout)" vertex="1">
+          <mxGeometry height="90" width="260" x="60" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="dde9c967463549a69634a155c1198244" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="АКБ коптера (Power bus)" vertex="1">
+          <mxGeometry height="70" width="260" x="60" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="a221ec47fea44033b94952ef50442316" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Мультиспектральна камера (Power, Data/Sync)" vertex="1">
+          <mxGeometry height="90" width="420" x="-560" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="0021790d1a8046d1b049a39a9136d1f0" edge="1" parent="1" source="e74a88177f1748e291a58ca5e8fa807c" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="ebf53ccb3c594a48b6eddb8ab9b823bc" value="S.Bus / UART">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7dbc269ca8264e95befb4c09446a6b8a" edge="1" parent="1" source="ebf53ccb3c594a48b6eddb8ab9b823bc" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="08594352cd6d48af9d3338d308b39ce6" value="Вихід мотора (3 фази)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ced85a9e58284389af46033c4e282c84" edge="1" parent="1" source="ebf53ccb3c594a48b6eddb8ab9b823bc" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="33fd261c20c040bfa37af7d6d5b98abc" value="Вихід мотора (3 фази)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="82ff771ff69a460bbf7e948bdceb36b2" edge="1" parent="1" source="dde9c967463549a69634a155c1198244" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="db9f6d566fcf4b5ab65744961709c164" value="Vin (АКБ)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="022eb5cdebd64332b22630d3e7fb2051" edge="1" parent="1" source="db9f6d566fcf4b5ab65744961709c164" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="ebf53ccb3c594a48b6eddb8ab9b823bc" value="Vout (5В/12В)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d59e2183042543fb86d6f6df51ccf3e9" edge="1" parent="1" source="db9f6d566fcf4b5ab65744961709c164" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="a221ec47fea44033b94952ef50442316" value="Vout (камера)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ee42a3b6c4e44a6b9106e8bea5afb4f3" edge="1" parent="1" source="e74a88177f1748e291a58ca5e8fa807c" style="endArrow=block;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;" target="a221ec47fea44033b94952ef50442316" value="Trigger / Sync">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
