@@ -5,6 +5,7 @@
 **Тема лабораторної роботи:** Аналіз становища та створення аванпроекту  
 **Варіант ТЗ:** №4 — підвіс для сільськогосподарського коптера (аналіз стану рослин)
 
+Звіт (https://docs.google.com/document/d/1e3G5lXoSGacUzDECstvsguAEFj9yL0-xm30z7BNiRb4/edit?usp=sharing)
 ---
 
 ## 1. Короткий опис моделі
@@ -65,10 +66,8 @@
 Файли схем збережені у папці `schemes/`:
 
 - Блок‑схема системи: [`schemes/system.drawio`]  
-  Онлайн‑перегляд (diagrams.net): https://app.diagrams.net/?src=github&repo=ampivtorak-oss/agro-gimbal-2axis&path=schemes/system.drawio
 
 - Схема підключення (wiring): [`schemes/wiring.drawio`]  
-  Онлайн‑перегляд (diagrams.net): https://app.diagrams.net/?src=github&repo=ampivtorak-oss/agro-gimbal-2axis&path=schemes/wiring.drawio
 
 ---
 
