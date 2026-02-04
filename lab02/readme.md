@@ -14,6 +14,3 @@
 - Звіт (https://docs.google.com/document/d/1XoU_oV_lFEjymJFnnSYdFdBPMtJtNwg1exkiWTWDa7E/edit?usp=sharing)
 ## Джерела
 Повний список джерел наведено у `sources.md`.
-
-## Автор
-Андрій
