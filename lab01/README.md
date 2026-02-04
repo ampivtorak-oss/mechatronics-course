@@ -34,7 +34,7 @@
 **Живлення/перетворення (DC‑DC/UBEC):** клас перетворювачів під живлення логіки/камери від силової шини БПЛА  
 - Використовується DC‑DC/UBEC з запасом по струму та стабілізованими виходами під камеру та контролер підвісу.
 
-**Повний BOM:** [`docs/BOM.md`](https://github.com/ampivtorak-oss/agro-gimbal-2axis/blob/main/docs/BOM.md)
+**Повний BOM:** [`docs/BOM.md`]
 
 ---
 
@@ -57,17 +57,17 @@
 | Sentera 6X Multispectral (kit) | Проф. агрозйомка | MS + RGB | Варіанти з підвісом/китом | Інтеграції під різні платформи | Висока якість даних, модульність | Висока ціна; залежність від сумісності китів/кріплень | https://info.sentera.com/hubfs/Spec%20Sheets%20for%20Sentera%20Sensors/6X%20Multispectral%20Spec%20Sheet.pdf |
 | MicaSense RedEdge‑P + Gremsy T3V3 | Точне картографування/агроаналітика | 5×MS + панхро | Промисловий 3‑осьовий підвіс | Платформозалежні інтеграції | Надійність; індустріальна механіка/демпфування | Дорого; надлишковість 3 осей для задач «надир»; складніша інтеграція | https://support.micasense.com/hc/en-us/articles/4410824602903-RedEdge-P-Integration-Guide ; https://gremsy.com/gremsy-t3v3-gimbal/ |
 
-Розширений аналіз ринку (окремим файлом): [`docs/market_analysis.md`](https://github.com/ampivtorak-oss/agro-gimbal-2axis/blob/main/docs/market_analysis.md)
+Розширений аналіз ринку (окремим файлом): [`docs/market_analysis.md`]
 
 ---
 
 ## 6. Схеми (Draw.io)
 Файли схем збережені у папці `schemes/`:
 
-- Блок‑схема системи: [`schemes/system.drawio`](https://github.com/ampivtorak-oss/agro-gimbal-2axis/blob/main/schemes/system.drawio)  
+- Блок‑схема системи: [`schemes/system.drawio`]  
   Онлайн‑перегляд (diagrams.net): https://app.diagrams.net/?src=github&repo=ampivtorak-oss/agro-gimbal-2axis&path=schemes/system.drawio
 
-- Схема підключення (wiring): [`schemes/wiring.drawio`](https://github.com/ampivtorak-oss/agro-gimbal-2axis/blob/main/schemes/wiring.drawio)  
+- Схема підключення (wiring): [`schemes/wiring.drawio`]  
   Онлайн‑перегляд (diagrams.net): https://app.diagrams.net/?src=github&repo=ampivtorak-oss/agro-gimbal-2axis&path=schemes/wiring.drawio
 
 ---
