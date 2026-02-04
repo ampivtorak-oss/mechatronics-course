@@ -1,0 +1,52 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram id="d_60300640a5" name="Structural scheme (МС)">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n_c312287975" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Сенсорна підсистема&#xa;(датчики/зворотний зв’язок)" vertex="1">
+          <mxGeometry height="70" width="220" x="30" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="n_53698ce3df" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Керуюча підсистема&#xa;(контролер + ПЗ)" vertex="1">
+          <mxGeometry height="70" width="220" x="350" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="n_b7f8f4d12e" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Привід + драйвер&#xa;(силова електроніка)" vertex="1">
+          <mxGeometry height="70" width="220" x="720" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="n_a34b5f93a2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Механічна підсистема&#xa;(виконавчий механізм)" vertex="1">
+          <mxGeometry height="70" width="220" x="1090" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="n_800c5b92ae" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Живлення&#xa;(джерело + захист)" vertex="1">
+          <mxGeometry height="70" width="520" x="490" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="n_99a036523d" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Інтерфейс оператора&#xa;(команди/індикація)" vertex="1">
+          <mxGeometry height="70" width="220" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b1c1304d60" edge="1" parent="1" source="n_99a036523d" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_53698ce3df" value="команди">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_37819182ad" edge="1" parent="1" source="n_c312287975" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_53698ce3df" value="вимірювання">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_1be42cd3d3" edge="1" parent="1" source="n_53698ce3df" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_b7f8f4d12e" value="керування">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d705d7ef97" edge="1" parent="1" source="n_b7f8f4d12e" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_a34b5f93a2" value="момент/рух">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_74efece711" edge="1" parent="1" source="n_a34b5f93a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_c312287975" value="параметри стану">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_e2b15633f4" edge="1" parent="1" source="n_800c5b92ae" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;" target="n_53698ce3df" value="живлення">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_f0cc8fb0ab" edge="1" parent="1" source="n_800c5b92ae" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;" target="n_b7f8f4d12e" value="живлення">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a00f9a0eae" edge="1" parent="1" source="n_800c5b92ae" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;" target="n_c312287975" value="живлення">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,55 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram id="d_14fe341e56" name="Functional scheme (МС)">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n_78a8b92c43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Init / Self-test&#xa;(перевірка живлення, сенсорів)" vertex="1">
+          <mxGeometry height="80" width="260" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n_86389c0489" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Ready&#xa;(очікування команди)" vertex="1">
+          <mxGeometry height="80" width="260" x="390" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n_10413d2ab5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Run&#xa;(керування зворотним зв’язком)" vertex="1">
+          <mxGeometry height="80" width="300" x="700" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n_3cf9547a54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Fault&#xa;(захист/блокування)" vertex="1">
+          <mxGeometry height="80" width="260" x="1090" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ae59663464" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Зчитування&#xa;сенсорів" vertex="1">
+          <mxGeometry height="70" width="180" x="495" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="n_30ec9daeb8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Регулятор&#xa;(PID/логіка)" vertex="1">
+          <mxGeometry height="70" width="200" x="1030" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="n_4c303f7788" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=center;verticalAlign=middle;strokeWidth=1;" value="Драйвер/привід&#xa;+ механіка" vertex="1">
+          <mxGeometry height="70" width="240" x="1010" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d37e394abf" edge="1" parent="1" source="n_78a8b92c43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_86389c0489" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_17fb64186f" edge="1" parent="1" source="n_86389c0489" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_10413d2ab5" value="start">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_98a623c7b3" edge="1" parent="1" source="n_10413d2ab5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_86389c0489" value="stop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_0ce18eddb5" edge="1" parent="1" source="n_10413d2ab5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_3cf9547a54" value="помилка/перевищення">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_3db0ce3b28" edge="1" parent="1" source="n_3cf9547a54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_86389c0489" value="reset">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_78fb4f0ef3" edge="1" parent="1" source="n_ae59663464" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_30ec9daeb8" value="дані">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_9703aabec5" edge="1" parent="1" source="n_30ec9daeb8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_4c303f7788" value="керування">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_8272297434" edge="1" parent="1" source="n_4c303f7788" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="n_ae59663464" value="зворотний зв’язок">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
